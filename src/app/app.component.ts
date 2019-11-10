@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'conFusion';
+  a: string ="";
+  b: string ="framework";
+
 }

@@ -1,2 +1,8 @@
 <mat-toolbar color="primary"> <span>Ristorante Con Fusion</span>  </mat-toolbar>
 <app-menu></app-menu>
+<p *ngIf="a; else dontShow">
+    test1
+</p>
+<ng-template #dontShow>
+   mucu
+</ng-template>
