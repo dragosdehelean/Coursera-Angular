@@ -29,6 +29,10 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { FormsModule } from "@angular/forms";
 import { LogPipe } from './log.pipe'; 
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,12 +55,15 @@ import { LogPipe } from './log.pipe';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    AppRoutingModule,
+    MatSelectModule,
+    MatSlideToggleModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    FormsModule
+    AppRoutingModule,    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   bootstrap: [AppComponent],
