@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import "hammerjs";
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
+
 import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from "@angular/material/list";
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -22,6 +21,10 @@ import {PromotionService} from "./services/promotion.service";
 import {LeaderService} from "./services/leader.service";
 import { LoginComponent } from './login/login.component';
 
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -68,9 +71,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSliderModule,
     AppRoutingModule,    
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService, {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent]
 })
