@@ -1,1 +1,1 @@
-export const baseURL = 'http://localhost:3000/';
+export const baseURL = 'https://bc5249d449b285c5b77702574630db9a3506-3000.app.online.visualstudio.com/';
