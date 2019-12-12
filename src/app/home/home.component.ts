@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     private promotionservice: PromotionService,
     private leaderService: LeaderService,
     @Inject('baseURL') private baseURL
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.dishservice.getFeaturedDish().subscribe(dish => (this.dish = dish));
@@ -31,5 +31,7 @@ export class HomeComponent implements OnInit {
     this.leaderService
       .getFeaturedLeader()
       .subscribe(leader => (this.leader = leader));
+    console.log("uite care este baseURL + dish.image", (this.baseURL + this.dish.image))
   }
+
 }

@@ -1,1 +1,1 @@
-export const baseURL = 'https://bc5249d449b285c5b77702574630db9a3506-3000.app.online.visualstudio.com/';
+export const baseURL = 'https://ea3364febbb50a4e930981618926387a52f6-3000.app.online.visualstudio.com/';
