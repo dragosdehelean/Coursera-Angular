@@ -5,12 +5,15 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from './app.component';
 import "hammerjs";
 import { HttpClientModule } from '@angular/common/http';
+
+
 import { baseURL } from './shared/baseurl';
 
 import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from "@angular/material/list";
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from "./services/dish.service";
+import {ProcessHTTPMsgService} from "./services/process-httpmsg.service";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
@@ -74,7 +77,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [DishService, PromotionService, LeaderService, {provide: 'baseURL', useValue: baseURL}],
+  providers: [DishService, PromotionService, LeaderService, ProcessHTTPMsgService, {provide: 'baseURL', useValue: baseURL}],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent]
 })
